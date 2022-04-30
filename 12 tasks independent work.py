@@ -122,4 +122,24 @@ def task_11():
         print('Никуда не поместится, увы...')
 
 
-task_11()
+def task_12():
+    a = int(input('ребро куба:'))
+    va = a * a * a  # объём куба
+    print('Объём куба', va)
+    h = int(input('Высота цилиндра:'))
+    r = int(input('Радиус цилндра:'))
+    vr = math.pi * (r * r) * h  # объём цилиндра
+    print('Объём цилиндра',vr)
+    m = int(input('Объём жидкости:'))
+    count = 0
+    if va + vr <= m:
+        print('Заполнится обе')
+    elif va <= m:
+        print('Заполнится первая')
+    elif vr <= m:
+        print('Заполнится вторая')
+    else:
+        print('Ничего не заполнится')
+
+
+task_12()
